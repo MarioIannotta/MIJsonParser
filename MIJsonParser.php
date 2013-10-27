@@ -20,6 +20,7 @@
 				case 1 :
 					$this->makeFromDictionary(func_get_arg(0));
 					break;
+					
 				case 2 :
 					$keys = func_get_arg(0);
 					$values = func_get_arg(1);
