@@ -1,7 +1,7 @@
 MIJsonParser
 ============
 
-Convert your arrays in valid json string.
+MIJsonParser is a simple tool that allow you to convert any type of array in one json string.
 
 Example
 ============
