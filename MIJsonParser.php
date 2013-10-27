@@ -83,7 +83,7 @@
 				
 				$this->json .= '}';
 				
-				return;
+				return; 
 			
 			} else {
 				
