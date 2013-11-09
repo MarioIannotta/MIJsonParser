@@ -8,7 +8,7 @@ Example
 
 Input :
 	
-$Students = array(
+	$Students = array(
 	
 		array(
 			"Name" => "John",
@@ -60,47 +60,47 @@ $Students = array(
 
 Output:
 
-{
-    "Students": [
-        {
-            "Name": "John",
-            "Surname": "Smith",
-            "Grades": {
-                "OOP": "30",
-                "Operating systems": "28",
-                "Mathematics": {
-                    "I": "27",
-                    "II": "28",
-                    "III": "26"
-                },
-                "Books from the library": [
-                    "Advanced OOP",
-                    "Vector analysis"
-                ]
-            }
-        },
-        {
-            "Name": "Frank",
-            "Surname": "Williams",
-            "Grades": {
-                "Economy": "20",
-                "Phisic": {
-                    "I": "22",
-                    "II": "23"
-                },
-                "Mathematics": "20"
-            }
-        },
-        {
-            "Name": "Mike",
-            "Surname": "Taylor",
-            "Grades": {
-                "Electrotechnical": {
-                    "Circuits": "27",
-                    "EMF": "25"
-                },
-                "Chemistry": "24"
-            }
-        }
-    ]
-}
+	{
+	    "Students": [
+	        {
+	            "Name": "John",
+	            "Surname": "Smith",
+	            "Grades": {
+	                "OOP": "30",
+	                "Operating systems": "28",
+	                "Mathematics": {
+	                    "I": "27",
+	                    "II": "28",
+	                    "III": "26"
+	                },
+	                "Books from the library": [
+	                    "Advanced OOP",
+	                    "Vector analysis"
+	                ]
+	            }
+	        },
+	        {
+	            "Name": "Frank",
+	            "Surname": "Williams",
+	            "Grades": {
+	                "Economy": "20",
+	                "Phisic": {
+	                    "I": "22",
+	                    "II": "23"
+	                },
+	                "Mathematics": "20"
+	            }
+	        },
+	        {
+	            "Name": "Mike",
+	            "Surname": "Taylor",
+	            "Grades": {
+	                "Electrotechnical": {
+	                    "Circuits": "27",
+	                    "EMF": "25"
+	                },
+	                "Chemistry": "24"
+	            }
+	        }
+	    ]
+	}
