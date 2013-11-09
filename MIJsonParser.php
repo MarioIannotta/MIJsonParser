@@ -5,11 +5,7 @@
 //  MIJsonParser v.1.1
 //
 //  Created by Mario Iannotta on 09/11/13.
-//
-//	LINKS:
-//  WebSite		https://www.marioiannotta.com/
-//  Twitter		https://www.twitter.com/MarioIannotta
-//  GitHub 		https://github.com/MarioIannotta/
+//  https://www.marioiannotta.com/
 //
 
 	class MIJsonParser {  
