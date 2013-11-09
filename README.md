@@ -8,42 +8,65 @@ Example
 
 Input :
 	
-	$mathematics_grades = array(
-		"I" => "27",
-		"II" => "28",
-		"III" => "26"
+	$Students = array(
+	    array(
+	        "Name" => "John",
+	        "Surname" => "Smith",
+	        "Grades" => array(
+	            "OOP" => "30",
+	            "Operating systems" => "28",
+	            "Mathematics" => array("I" => "27", "II" => "28", "III" => "26"),
+	            "Books from the library" => array("Advanced OOP", "Vector analysis")
+	        )
+	    ),
+	    array(
+	        "Name" => "Mike",
+	        "Surname" => "Taylor",
+	        "Grades" => array(
+	            "Electrotechnical" => array("Circuits" => "27", "EMF" => "25"),
+	            "Chemistry" => "24"
+	        )
+	    )
 	);
-			
-	$grades = array(
-		"OOP" => "30",
-		"Operating systems" => "28",
-		"Mathematics" => $mathematics_grades
-	);
-			
-	$student = array(
-		"name" => "John",
-		"surname" => "Smith",
-		"grades" => $grades
-	);
-			
-					
+
+
+
 	require_once 'MIJsonParser.php';
 	$json = new MIJsonParser;
-			
-	$json->get($student);
+	
+	$json->get($Students);
 
 Output:
 
 	{
-	    "name": "John",
-	    "surname": "Smith",
-	    "grades": {
-	        "OOP": "30",
-	        "Operating systems": "28",
-	        "Mathematics": {
-	            "I": "27",
-	            "II": "28",
-	            "III": "26"
+	    "Students": [
+	        {
+	            "Name": "John",
+	            "Surname": "Smith",
+	            "Grades": {
+	                "OOP": "30",
+	                "Operating systems": "28",
+	                "Mathematics": {
+	                    "I": "27",
+	                    "II": "28",
+	                    "III": "26"
+	                },
+	                "Books from the library": [
+	                    "Advanced OOP",
+	                    "Vector analysis"
+	                ]
+	            }
+	        },
+	        {
+	            "Name": "Mike",
+	            "Surname": "Taylor",
+	            "Grades": {
+	                "Electrotechnical": {
+	                    "Circuits": "27",
+	                    "EMF": "25"
+	                },
+	                "Chemistry": "24"
+	            }
 	        }
-	    }
+	    ]
 	}
