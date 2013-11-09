@@ -9,7 +9,6 @@ Example
 Input :
 	
 	$Students = array(
-	
 		array(
 			"Name" => "John",
 			"Surname" => "Smith",
@@ -23,21 +22,7 @@ Input :
 				),
 				"Books from the library" => array("Advanced OOP", "Vector analysis")
 			)
-		), 
-		
-		array(
-			"Name" => "Frank",
-			"Surname" => "Williams",
-			"Grades" => array(
-				"Economy" => "20",
-				"Phisic" => array(
-					"I" => "22",
-					"II" => "23"
-				),
-				"Mathematics" => "20"
-			)
-		), 
-		
+		),
 		array(
 			"Name" => "Mike",
 			"Surname" => "Taylor",
