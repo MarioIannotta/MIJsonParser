@@ -9,38 +9,31 @@ Example
 Input :
 	
 	$Students = array(
-		array(
-			"Name" => "John",
-			"Surname" => "Smith",
-			"Grades" => array(
-				"OOP" => "30",
-				"Operating systems" => "28",
-				"Mathematics" => array(
-					"I" => "27",
-					"II" => "28",
-					"III" => "26"
-				),
-				"Books from the library" => array("Advanced OOP", "Vector analysis")
-			)
-		),
-		array(
-			"Name" => "Mike",
-			"Surname" => "Taylor",
-			"Grades" => array(
-				"Electrotechnical" => array(
-					"Circuits" => "27",
-					"EMF" => "25"
-				),
-				"Chemistry" => "24"
-			)
-		)
+	    array(
+	        "Name" => "John",
+	        "Surname" => "Smith",
+	        "Grades" => array(
+	            "OOP" => "30",
+	            "Operating systems" => "28",
+	            "Mathematics" => array("I" => "27", "II" => "28", "III" => "26"),
+	            "Books from the library" => array("Advanced OOP", "Vector analysis")
+	        )
+	    ),
+	    array(
+	        "Name" => "Mike",
+	        "Surname" => "Taylor",
+	        "Grades" => array(
+	            "Electrotechnical" => array("Circuits" => "27", "EMF" => "25"),
+	            "Chemistry" => "24"
+	        )
+	    )
 	);
-		
-			
-					
+
+
+
 	require_once 'MIJsonParser.php';
 	$json = new MIJsonParser;
-			
+	
 	$json->get($Students);
 
 Output:
@@ -62,18 +55,6 @@ Output:
 	                    "Advanced OOP",
 	                    "Vector analysis"
 	                ]
-	            }
-	        },
-	        {
-	            "Name": "Frank",
-	            "Surname": "Williams",
-	            "Grades": {
-	                "Economy": "20",
-	                "Phisic": {
-	                    "I": "22",
-	                    "II": "23"
-	                },
-	                "Mathematics": "20"
 	            }
 	        },
 	        {
