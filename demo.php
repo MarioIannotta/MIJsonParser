@@ -2,7 +2,7 @@
 
 //
 //  demo.php
-//  MIJsonParser v.1.1
+//  MIJsonParser v.1.2
 //
 //  Created by Mario Iannotta on 09/11/13.
 //  https://www.marioiannotta.com/
@@ -58,6 +58,4 @@
 			
 	$json->get($Students);
 	
-	echo "<br/><br/>";
-	$json->get($Students);
 ?>

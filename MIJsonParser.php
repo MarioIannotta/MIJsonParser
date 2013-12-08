@@ -2,7 +2,7 @@
 
 //
 //  MIJsonParser.php
-//  MIJsonParser v.1.1
+//  MIJsonParser v.1.2
 //
 //  Created by Mario Iannotta on 09/11/13.
 //  https://www.marioiannotta.com/
@@ -10,15 +10,14 @@
 
 	class MIJsonParser {  
 	
-		var $json, $errors, $n_recursion;
+		var $json, $errors;
 	
 		function MIJsonParser() { 
 		
 			$this->json = ""; 
-			$this->n_recursion = 0;
 			$this->errors['no_parameter'] = '{ "error" : "Nothing to make." }';
-			$this->errors['different_length'] = '{ "error" : "Keys and values must have the same number of elements." }';
 			$this->errors['no_key'] = '{ "error" : "Keys and values must have the same number of elements." }';
+			$this->errors['different_length'] = '{ "error" : "Keys and values must have the same number of elements." }';
 			
 		}
 		
@@ -29,6 +28,7 @@
 				case 1 :
 					$this->makeFromList(func_get_arg(0));
 					break;
+					
 				case 2 :
 					$keys = func_get_arg(0);
 					$values = func_get_arg(1);
@@ -36,7 +36,6 @@
 					break;
 					
 				default:
-				
 					$this->json = $this->errors['no_parameter'];
 					break;
 				
@@ -50,8 +49,6 @@
 			$this->clear();
 			
 		}
-		
-		
 
 		function makeFromList($list) {
 			
@@ -63,7 +60,7 @@
 				foreach ($list as $key => $value) {
 				
 				    $this->json .= $this->makeFromKeysAndValues($key, $value);
-					if ($i++ + 1 < count($list)) $this->json .= ",";
+					if ($i+++ 1 < count($list)) $this->json .= ",";
 				}
 				
 				$this->json .= '}';
@@ -72,7 +69,9 @@
 				
 			} else {
 				
-				if ($this->n_recursion == 0) $this->json = '"'.$this->getVarName($list).'":';
+				$arrayName = $this->getVarName($list);
+				if ($arrayName) $this->json .= '"'.$arrayName.'":';
+				
 				$this->json .= '[';
 				
 				for ($i = 0; $i < count($list); $i++) {
@@ -126,7 +125,6 @@
 				$this->json .= '"'.$keys.'":"'.$values.'"';
 				return;
 			}
-			$this->n_recursion++;
 		}
 		
 		function clear() {
@@ -138,6 +136,7 @@
 		}
 		
 		function getVarName($var) {
+		
 		    foreach($GLOBALS as $var_name => $value) if ($value === $var) return $var_name;
 		    return false;
 		}
